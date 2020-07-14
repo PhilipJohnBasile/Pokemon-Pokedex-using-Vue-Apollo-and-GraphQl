@@ -1,0 +1,26 @@
+query pokemon($name: String!) {
+  pokemonByName(name: $name) {
+    name
+    types
+    maxCP
+    maxHP
+    weight {
+      maximum
+      minimum
+    }
+    height {
+      maximum
+      minimum
+    }
+    isFavorite
+    image
+    id
+    sound
+    evolutions {
+      name
+      isFavorite
+      image
+      id
+    }
+  }
+}

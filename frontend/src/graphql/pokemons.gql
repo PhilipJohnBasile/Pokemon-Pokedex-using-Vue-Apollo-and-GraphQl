@@ -1,0 +1,17 @@
+query pokemons($search: String, $pokeType: String, $favs: Boolean) {
+  pokemons(
+    query: {
+      limit: 151
+      search: $search
+      filter: { type: $pokeType, isFavorite: $favs }
+    }
+  ) {
+    edges {
+      id
+      image
+      name
+      types
+      isFavorite
+    }
+  }
+}
